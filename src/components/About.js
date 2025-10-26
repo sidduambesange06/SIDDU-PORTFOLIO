@@ -42,7 +42,7 @@ const About = () => {
                   src={ProfileImg} 
                   alt="Siddharoodh Ambesange - Deep Tech Entrepreneur" 
                   className='w-full h-full object-cover scale-110'
-                  style={{ objectPosition: '65% 20%' }}
+                  style={{ objectPosition: '72% 20%' }}
                 />
                 
                 {/* Overlay gradient on hover */}

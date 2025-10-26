@@ -16,10 +16,10 @@ const About = () => {
   return (
     <section className='section' id='about' ref={ref}>
       <div className='container mx-auto'>
-        <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 h-screen'>
+        <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 min-h-screen py-8'>
           {/* Image */}
           <motion.div 
-            className='flex-1 bg-about bg-contain bg-no-repeat h-[800px] w-[60%] mix-blend-lighten bg-top'
+            className='flex-1 bg-about bg-contain bg-no-repeat h-[300px] sm:h-[500px] lg:h-[800px] w-full lg:w-[60%] mix-blend-lighten bg-center lg:bg-top'
             initial='hidden'
             animate={inView ? 'show' : ''}
             variants={fadeIn('right', 0.3)}
@@ -28,7 +28,7 @@ const About = () => {
           
           {/* Text */}
           <motion.div 
-            className='flex-1 text-right'
+            className='flex-1 text-center lg:text-right px-4 lg:px-0'
             initial='hidden'
             animate={inView ? 'show' : ''}
             variants={fadeIn('left', 0.5)}

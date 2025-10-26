@@ -34,7 +34,7 @@ const Services = () => {
   return (
     <section className='section' id='services'>
       <div className='container mx-auto'>
-        <div className='flex flex-col lg:flex-row'>
+        <div className='flex flex-col lg:flex-row gap-y-12 lg:gap-y-0 px-4 lg:px-0'>
           {/* Text Content - sliding from left */}
           <motion.div
             className='flex-1 flex justify-center items-center'
@@ -70,10 +70,10 @@ const Services = () => {
                 const { name, description, link } = solution;
                 return (
                   <div
-                    className='border-b border-white/20 min-h-[146px] mb-[38px] flex py-4'
+                    className='border-b border-white/20 min-h-[146px] mb-[38px] flex flex-col sm:flex-row py-4 gap-4'
                     key={index}
                   >
-                    <div className='max-w-[476px]'>
+                    <div className='flex-1'>
                       <h4 className='text-[20px] tracking-wider font-semibold mb-4'>
                         {name}
                       </h4>
@@ -81,7 +81,7 @@ const Services = () => {
                         {description}
                       </p>
                     </div>
-                    <div className='flex flex-col flex-1 items-end'>
+                    <div className='flex flex-row sm:flex-col gap-4 sm:gap-0 items-center sm:items-end justify-center sm:justify-start'>
                       <Link to='contact' smooth={true} spy={true}>
                         <button
                           className='btn w-9 h-9 mb-[42px] flex justify-center items-center'

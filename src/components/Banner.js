@@ -25,7 +25,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='text-[55px] font-bold leading-[0.8] lg:text-[110px]'>
+              className='text-[35px] sm:text-[55px] font-bold leading-[0.9] lg:text-[110px]'>
               SIDDHAROODH <span>AMBESANGE</span>
             </motion.h1>
             <motion.div
@@ -33,7 +33,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='mb-6 text-[36px] lg:text-[60px] font-secondary
+              className='mb-6 text-[20px] sm:text-[36px] lg:text-[60px] font-secondary
             font-semibold uppercase leading-[1]'>
               <span className='text-white mr-4'>I am a</span>
               <TypeAnimation
@@ -56,7 +56,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='mb-8 max-w-lg mx-auto lg:mx-0 text-base'>
+              className='mb-8 max-w-lg mx-auto lg:mx-0 text-sm sm:text-base px-4 lg:px-0'>
               "              Building the future of intelligent interfaces — from AI-powered AR glasses (Drishti AR) to smart city infrastructure. Leading a 20-member team across dual ventures while delivering production AI/ML solutions and web platforms for enterprise clients. Bringing powerful intelligence to the edge through innovation and consulting."
             </motion.p>
 
@@ -65,7 +65,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: false, amount: 0.7 }}
-              className='flex max-w-max gap-x-6 items-center mb-12 mx-auto
+              className='flex flex-col sm:flex-row max-w-max gap-4 sm:gap-x-6 items-center mb-12 mx-auto
             lg:mx-0'>
               <a href='https://wa.me/917892787731?text=Hi%20Siddu%2C%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20connect' target='_blank' rel='noopener noreferrer'>
                 <button className='btn btn-lg'>Contact me</button>

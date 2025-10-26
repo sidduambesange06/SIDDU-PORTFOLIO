@@ -80,18 +80,18 @@ ${emailData.body}`;
 
   return (
     <>
-      <header className='py-8'>
-        <div className="container mx-auto">
+      <header className='py-6 sm:py-8'>
+        <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* logo */}
             <Link to='home' smooth={true} spy={true} className='cursor-pointer'>
               <div>
-                <h1 className='text-2xl font-primary font-bold text-gradient'>SIDDHAROODH</h1>
-                <p className='text-sm text-white/70 font-secondary'>Deep Tech Entrepreneur</p>
+                <h1 className='text-lg sm:text-2xl font-primary font-bold text-gradient'>SIDDHAROODH</h1>
+                <p className='text-xs sm:text-sm text-white/70 font-secondary'>Deep Tech Entrepreneur</p>
               </div>
             </Link>
             {/* button */}
-            <button onClick={openWorkEmail} className='btn btn-sm'>
+            <button onClick={openWorkEmail} className='btn btn-sm text-xs sm:text-sm px-4 sm:px-6'>
               Work with me
             </button>
           </div>
@@ -101,7 +101,7 @@ ${emailData.body}`;
       {/* Advanced Email Modal */}
       {showEmailModal && (
         <div className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'>
-          <div className='bg-primary border border-accent/30 rounded-2xl p-8 max-w-md w-full mx-4 relative'>
+          <div className='bg-primary border border-accent/30 rounded-2xl p-6 sm:p-8 max-w-md w-full mx-4 relative max-h-[90vh] overflow-y-auto'>
             {/* Close button */}
             <button 
               onClick={() => setShowEmailModal(false)}
@@ -110,13 +110,13 @@ ${emailData.body}`;
               ×
             </button>
             
-            <h3 className='text-2xl font-primary text-gradient mb-6'>Contact Me</h3>
+            <h3 className='text-xl sm:text-2xl font-primary text-gradient mb-6'>Contact Me</h3>
             
             {/* Email address */}
             <div className='mb-6'>
-              <p className='text-white/80 mb-2'>Email:</p>
-              <div className='flex items-center gap-2'>
-                <span className='text-accent font-semibold'>{emailData.email}</span>
+              <p className='text-white/80 mb-2 text-sm sm:text-base'>Email:</p>
+              <div className='flex items-center gap-2 flex-wrap'>
+                <span className='text-accent font-semibold text-sm sm:text-base break-all'>{emailData.email}</span>
                 <button 
                   onClick={() => copyToClipboard(emailData.email, 'email')}
                   className='text-xs bg-accent/20 hover:bg-accent/30 px-2 py-1 rounded transition-all'

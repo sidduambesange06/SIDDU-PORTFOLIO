@@ -34,7 +34,7 @@ const Work = () => {
         </motion.div>
 
         {/* Ventures Grid */}
-        <div className='flex flex-col lg:flex-row gap-y-8 lg:gap-x-6 justify-center items-stretch w-full max-w-5xl'>
+        <div className='flex flex-col lg:flex-row gap-y-8 lg:gap-x-6 justify-center items-stretch w-full max-w-5xl px-4 lg:px-0'>
 
           {/* DRISHTI AR CARD */}
           <motion.div
@@ -58,10 +58,10 @@ const Work = () => {
                 </span>
               </div>
 
-              <h3 className='text-3xl font-primary font-bold text-white mb-2'>
+              <h3 className='text-2xl sm:text-3xl font-primary font-bold text-white mb-2'>
                 🥽 Drishti AR
               </h3>
-              <p className='text-accent font-semibold mb-4 text-lg'>
+              <p className='text-accent font-semibold mb-4 text-base sm:text-lg'>
                 AI-First Smart Glasses
               </p>
 
@@ -98,10 +98,10 @@ const Work = () => {
                 </span>
               </div>
 
-              <h3 className='text-3xl font-primary font-bold text-white mb-2'>
+              <h3 className='text-2xl sm:text-3xl font-primary font-bold text-white mb-2'>
                 🏙 Smart City Intelligence
               </h3>
-              <p className='text-blue-400 font-semibold mb-4 text-lg'>
+              <p className='text-blue-400 font-semibold mb-4 text-base sm:text-lg'>
                 Urban AI Infrastructure Platform
               </p>
 
@@ -132,7 +132,7 @@ const Work = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
-                className={`relative max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-2xl p-8 ${
+                className={`relative max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-2xl p-4 sm:p-8 ${
                   expandedCard === 'drishti' 
                     ? 'bg-gradient-to-br from-primary via-primary to-accent/20 border-2 border-accent' 
                     : 'bg-gradient-to-br from-primary via-primary to-blue-500/20 border-2 border-blue-500'

@@ -152,12 +152,12 @@ const Contact = () => {
           exit='exit' 
           whileInView={'show'} 
           viewport={{ once: false, amount: 0.3 }}
-          className='flex-1 flex justify-start items-center'>
+          className='flex-1 flex justify-start items-center px-4 lg:px-0'>
           <div>
             <h4 className='text-x1 uppercase text-accent font-medium mb-2 tracking-wide'>
               Get in touch
             </h4>
-            <h2 className='text-[45px] lg:text-[90px] leading-none mb-8'>
+            <h2 className='text-[32px] sm:text-[45px] lg:text-[90px] leading-none mb-8'>
               Let's Work <br />together!!
             </h2>
             

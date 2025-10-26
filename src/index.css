@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Cosmic Background Animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes nebula-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+@keyframes shooting-star {
+  0% { transform: translateX(-100px) translateY(-100px); opacity: 1; }
+  100% { transform: translateX(1000px) translateY(1000px); opacity: 0; }
+}
+
+.cosmic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: nebula-pulse 8s infinite ease-in-out;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  animation: shooting-star 3s linear infinite;
+}
+
 .btn {
   background: linear-gradient(
     92.23deg,
@@ -43,6 +108,8 @@
 @layer base {
   body {
     @apply font-secondary text-base sm:text-lg leading-7 sm:leading-8 text-white;
+    background: #090A0F;
+    overflow-x: hidden;
   }
   .h2 {
     @apply font-primary text-[28px] sm:text-[32px] mb-4 sm:mb-6 tracking-[10%] uppercase;

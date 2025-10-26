@@ -41,17 +41,12 @@ const About = () => {
                 <img 
                   src={ProfileImg} 
                   alt="Siddharoodh Ambesange - Deep Tech Entrepreneur" 
-                  className='w-full h-full object-cover object-top scale-110'
-                  style={{ objectPosition: 'center 20%' }}
+                  className='w-full h-full object-cover scale-110'
+                  style={{ objectPosition: '55% 20%' }}
                 />
                 
                 {/* Overlay gradient on hover */}
                 <div className='absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
-              </div>
-              
-              {/* Floating badge */}
-              <div className='absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-accent to-blue-500 px-6 py-2 rounded-full shadow-lg'>
-                <p className='text-white font-bold text-sm sm:text-base whitespace-nowrap'>Deep Tech Entrepreneur</p>
               </div>
             </div>
           </motion.div>

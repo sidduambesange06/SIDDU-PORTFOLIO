@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 // Variants
 import { fadeIn } from '../variants';
 // Profile Image
-import ProfileImg from '../assets/profile.jpg';
+import ProfileImg from '../assets/siddu profile pic .jpg';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -41,7 +41,8 @@ const About = () => {
                 <img 
                   src={ProfileImg} 
                   alt="Siddharoodh Ambesange - Deep Tech Entrepreneur" 
-                  className='w-full h-full object-cover object-center'
+                  className='w-full h-full object-cover object-top scale-110'
+                  style={{ objectPosition: 'center 20%' }}
                 />
                 
                 {/* Overlay gradient on hover */}

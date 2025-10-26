@@ -1,0 +1,23 @@
+PROFILE IMAGE SETUP
+===================
+
+Please save your professional profile image as:
+  src/assets/profile.jpg
+
+The image you provided should be saved with this exact filename.
+
+Image Requirements:
+- Filename: profile.jpg
+- Location: src/assets/
+- Format: JPG/JPEG
+- Recommended size: 800x800px or higher (square ratio works best)
+- The component will automatically crop it to circular shape
+
+Once you save the image, the About section will display your professional photo with:
+- Circular frame with gradient border
+- Animated rotating glow effect
+- Hover animations
+- "Deep Tech Entrepreneur" badge at the bottom
+- Professional shadow and lighting effects
+
+The design is fully responsive and will look great on all devices!

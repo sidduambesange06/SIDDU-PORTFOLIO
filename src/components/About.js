@@ -7,6 +7,8 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 // Variants
 import { fadeIn } from '../variants';
+// Profile Image
+import ProfileImg from '../assets/profile.jpg';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -17,14 +19,41 @@ const About = () => {
     <section className='section' id='about' ref={ref}>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 min-h-screen py-8'>
-          {/* Image */}
+          {/* Professional Profile Image */}
           <motion.div 
-            className='flex-1 bg-about bg-contain bg-no-repeat h-[300px] sm:h-[500px] lg:h-[800px] w-full lg:w-[60%] mix-blend-lighten bg-center lg:bg-top'
+            className='flex-1 flex justify-center items-center'
             initial='hidden'
             animate={inView ? 'show' : ''}
             variants={fadeIn('right', 0.3)}
             viewport={{ once: false, amount: 0.3 }}
-          ></motion.div>
+          >
+            <div className='relative group'>
+              {/* Outer glow ring */}
+              <div className='absolute inset-0 rounded-full bg-gradient-to-r from-accent via-blue-500 to-purple-600 blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse'></div>
+              
+              {/* Rotating border */}
+              <div className='absolute inset-0 rounded-full bg-gradient-to-r from-accent via-blue-500 to-purple-600 animate-spin-slow p-1'>
+                <div className='w-full h-full rounded-full bg-primary'></div>
+              </div>
+              
+              {/* Profile Image Container */}
+              <div className='relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl group-hover:scale-105 transition-transform duration-500'>
+                <img 
+                  src={ProfileImg} 
+                  alt="Siddharoodh Ambesange - Deep Tech Entrepreneur" 
+                  className='w-full h-full object-cover object-center'
+                />
+                
+                {/* Overlay gradient on hover */}
+                <div className='absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
+              </div>
+              
+              {/* Floating badge */}
+              <div className='absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-accent to-blue-500 px-6 py-2 rounded-full shadow-lg'>
+                <p className='text-white font-bold text-sm sm:text-base whitespace-nowrap'>Deep Tech Entrepreneur</p>
+              </div>
+            </div>
+          </motion.div>
           
           {/* Text */}
           <motion.div 

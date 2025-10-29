@@ -221,20 +221,20 @@ const Work = () => {
                       </div>
                     </div>
 
-                    <div className='flex gap-4'>
+                    <div className='flex flex-col sm:flex-row gap-4'>
                       <a 
                         href='https://drive.google.com/file/d/1b_LeqB5nv5TSJHcv_w20OsKdJTeo7wH-/view?usp=sharing' 
                         target='_blank' 
                         rel='noopener noreferrer'
-                        className='btn btn-lg flex-1 text-center'
+                        className='btn btn-lg flex-1 text-center flex items-center justify-center'
                       >
-                        View Registration Certificate
+                        View Registration
                       </a>
                       <a 
                         href='https://wa.me/917892787731?text=Hi%20Siddharoodh%2C%20I%27m%20interested%20in%20Drishti%20AR' 
                         target='_blank' 
                         rel='noopener noreferrer'
-                        className='btn btn-lg flex-1 text-center bg-green-600 hover:bg-green-700'
+                        className='btn btn-lg flex-1 text-center bg-green-600 hover:bg-green-700 flex items-center justify-center'
                       >
                         Discuss Investment
                       </a>
@@ -326,22 +326,22 @@ const Work = () => {
                       </div>
                     </div>
 
-                    <div className='flex gap-4'>
+                    <div className='flex flex-col sm:flex-row gap-4'>
                       <a 
                         href='https://wa.me/917892787731?text=Hi%20Siddharoodh%2C%20I%27m%20interested%20in%20Smart%20City%20Intelligence%20Platform' 
                         target='_blank' 
                         rel='noopener noreferrer'
-                        className='btn btn-lg flex-1 text-center bg-blue-600 hover:bg-blue-700'
+                        className='btn btn-lg flex-1 text-center bg-blue-600 hover:bg-blue-700 flex items-center justify-center'
                       >
-                        Discuss Partnership
+                        Partnership
                       </a>
                       <a 
                         href='https://wa.me/917892787731?text=Hi%20Siddharoodh%2C%20I%27d%20like%20to%20pilot%20Smart%20City%20technology' 
                         target='_blank' 
                         rel='noopener noreferrer'
-                        className='btn btn-lg flex-1 text-center bg-green-600 hover:bg-green-700'
+                        className='btn btn-lg flex-1 text-center bg-green-600 hover:bg-green-700 flex items-center justify-center'
                       >
-                        Pilot Opportunity
+                        Pilot Program
                       </a>
                     </div>
                   </div>

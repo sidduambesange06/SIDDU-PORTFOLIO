@@ -1,4 +1,3 @@
-import React from 'react';
 // CountUp
 import CountUp from 'react-countup';
 // Intersection Observer
@@ -20,7 +19,7 @@ const About = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-20 lg:gap-y-0 min-h-screen py-8'>
           {/* Professional Profile Image */}
-          <motion.div 
+          <motion.div
             className='flex-1 flex justify-center items-center'
             initial='hidden'
             animate={inView ? 'show' : ''}
@@ -30,29 +29,29 @@ const About = () => {
             <div className='relative group'>
               {/* Outer glow ring */}
               <div className='absolute inset-0 rounded-full bg-gradient-to-r from-accent via-blue-500 to-purple-600 blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 animate-pulse'></div>
-              
+
               {/* Rotating border */}
               <div className='absolute inset-0 rounded-full bg-gradient-to-r from-accent via-blue-500 to-purple-600 animate-spin-slow p-1'>
                 <div className='w-full h-full rounded-full bg-primary'></div>
               </div>
-              
+
               {/* Profile Image Container */}
               <div className='relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-4 border-accent/30 shadow-2xl group-hover:scale-105 transition-transform duration-500'>
-                <img 
-                  src={ProfileImg} 
-                  alt="Siddharoodh Ambesange - Deep Tech Entrepreneur" 
+                <img
+                  src={ProfileImg}
+                  alt="Siddharoodh Ambesange - Deep Tech Entrepreneur"
                   className='w-full h-full object-cover scale-110'
                   style={{ objectPosition: '80% 20%' }}
                 />
-                
+
                 {/* Overlay gradient on hover */}
                 <div className='absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
               </div>
             </div>
           </motion.div>
-          
+
           {/* Text */}
-          <motion.div 
+          <motion.div
             className='flex-1 text-center lg:text-right px-4 lg:px-0'
             initial='hidden'
             animate={inView ? 'show' : ''}

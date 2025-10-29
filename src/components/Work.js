@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // motion 
 import { motion, AnimatePresence } from 'framer-motion';
 // icons
@@ -10,8 +10,23 @@ const Work = () => {
   const [expandedCard, setExpandedCard] = useState(null);
 
   const toggleCard = (cardId) => {
-    setExpandedCard(expandedCard === cardId ? null : cardId);
+    if (expandedCard === cardId) {
+      // Closing modal
+      setExpandedCard(null);
+      document.body.classList.remove('modal-open');
+    } else {
+      // Opening modal
+      setExpandedCard(cardId);
+      document.body.classList.add('modal-open');
+    }
   };
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('modal-open');
+    };
+  }, []);
 
   return (
     <section className='section' id='work'>
@@ -124,8 +139,11 @@ const Work = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className='fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4'
-              onClick={() => setExpandedCard(null)}
+              className='fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto'
+              onClick={() => {
+                setExpandedCard(null);
+                document.body.classList.remove('modal-open');
+              }}
             >
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -140,7 +158,10 @@ const Work = () => {
               >
                 {/* Close Button */}
                 <button
-                  onClick={() => setExpandedCard(null)}
+                  onClick={() => {
+                    setExpandedCard(null);
+                    document.body.classList.remove('modal-open');
+                  }}
                   className='absolute top-4 right-4 text-white/60 hover:text-white text-2xl'
                 >
                   <FaTimes />
